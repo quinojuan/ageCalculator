@@ -3,10 +3,14 @@ userInput.max = new Date().toISOString().split("T")[0];
 
 const calculateAge = () => {
   let birthDate = new Date(userInput.value);
+  console.log({birthDate});
 
   let d1 = birthDate.getDate();
+  console.log({d1})
   let m1 = birthDate.getMonth() + 1;
+  console.log({m1})
   let y1 = birthDate.getFullYear();
+  console.log({y1})
 
   let today = new Date();
 
@@ -36,8 +40,7 @@ const calculateAge = () => {
     y3--;
   }
   console.log(y3, m3, d3);
-
-  const getDaysInMonth = (year, month) => {
-    return new Date(year, month, 0).getDate();
-  };
+};
+const getDaysInMonth = (year, month) => {
+  return new Date(year, month, 0).getDate();
 };
